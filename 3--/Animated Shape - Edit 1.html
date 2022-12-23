@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Shape</title>
+    <style>
+        body{
+            overflow : hidden;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            width: 100%;
+            min-height: 100vh;
+            background: url('Animated Shape.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 400ms ease-in-out;
+        }
+
+        @media (max-width: 750px){
+            body{
+                justify-content: center;
+            }
+        }
+
+        .card{
+            width:500px;
+            height: 500px;
+            padding: 15px;
+            margin:50px;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            background-color: #fff;
+            transition: all 400ms ease-in-out;
+        }
+        .card-head{
+            width: 100%;
+            height: auto;
+            margin : 10px 0;
+        }
+        .card-head .avatar{
+            overflow: hidden;
+            width: 100px;
+            height: 100px;
+            margin : 10px auto;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            transition: all 400ms ease-in-out;
+        }
+        .card-head .avatar svg{
+            width: 100%;
+            height: auto;
+            scale: 1.15;
+            transition: all 400ms ease-in-out;
+        }
+        .card-head .title{
+            font-size: 24px;
+            font-family: 'Candara Light';
+            text-align: center;
+            margin: 8px 0;
+        }
+        .card-head hr{
+            width: 50%;
+            margin: auto;
+        }
+
+        .card .card-body{
+            margin : 10px 0;
+        }
+        .card .card-form-group{
+            width: 100%;
+            margin : 15px 0;
+            padding : 15px 0;
+        }
+        .card .card-form-group .card-form-input{
+            display: flex;
+            border:1px solid #6770f4;
+            padding:0;
+        }
+        .card .card-form-group label{
+            font-size: 12px;
+            font-family: 'Carlito';
+            font-weight: bold;
+        }
+        .card .card-form-group .card-form-input svg{
+            display: block;
+            background: #6770f4;
+            padding : 4px 4px;
+        }
+        .card .card-form-group .card-form-input input{
+            width:100%;
+            font-size: 18px;
+            text-align: center;
+            padding : 8px 12px;
+            border:1px solid transparent;
+            outline: 0;
+            transition: all 400ms ease-in-out;
+        }
+        .card .card-form-group .card-form-input input:focus{
+            box-shadow: none;
+        }
+
+        .card .card-foot .form-button{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .card .card-foot .form-button .btn-form{
+            cursor: pointer;
+            width : 150px;
+            height: auto;
+            background: #6770f4;
+            color : #fff;
+            border: 1px solid transparent;
+            padding : 12px;
+            transition: all 300ms ease-in-out;
+        }
+        .card .card-foot .form-button .btn-form:hover{
+            background: #313ef1;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" action="" class="card">
+        <div class="card-head">
+            <div class="avatar">
+                <svg width="128px" height="128px" viewBox="0 0 128 128" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#515570;}.cls-13,.cls-14,.cls-2{fill:#393c54;}.cls-2{opacity:0.5;}.cls-3{fill:#ffd8c9;}.cls-4{fill:#f85565;}.cls-11,.cls-12,.cls-5{fill:none;stroke:#515570;stroke-linecap:round;stroke-linejoin:round;}.cls-12,.cls-5{stroke-width:2px;}.cls-10,.cls-5{opacity:0.2;}.cls-6{fill:#fff;}.cls-7,.cls-9{fill:#ff8475;}.cls-7{opacity:0.4;}.cls-8{fill:#356cb6;opacity:0.1;}.cls-10{fill:#00adfe;}.cls-11{stroke-width:2.33px;}.cls-13{opacity:0.25;}</style></defs><title/><circle class="cls-1" cx="64" cy="64" r="60"/><circle class="cls-2" cx="64" cy="64" r="48"/><path class="cls-3" d="M35,68.36V52.42c0-14.69,10.41-27.62,24.9-30A30,30,0,0,1,95,52V68.78A30,30,0,0,1,59.9,98.36C45.41,96,35,83.05,35,68.36Z"/><path class="cls-4" d="M79.62,86H48.38A38.67,38.67,0,0,0,17.3,101.65a60,60,0,0,0,93.4,0A38.67,38.67,0,0,0,79.62,86Z"/><path class="cls-5" d="M56.69,41.56s-6.43.76-10.82,4.56"/><path class="cls-6" d="M93.14,41.91C86.49,32.52,77.69,24.8,65.35,24.8S43.14,31.39,37.11,41.06c-2,3.18,1.66,2.31,5.15.24S61,37,61,37s-4,2-5.63,4.71c4.26.46,11.4-3.95,11.4-3.95a11.55,11.55,0,0,0-1.55,3.95c4-1.22,6.87-2.58,8.54-4.41S96.23,46.28,93.14,41.91Z"/><path class="cls-4" d="M92.7,40.9s-.47-19.73-19.16-25S39.12,20.76,31.47,28.44C24,36,20.69,42.72,19.32,43.33,26,39.16,34.92,39,37.25,41.2c0,0,10-13.67,28.1-13.67A34.59,34.59,0,0,1,92.7,40.9Z"/><circle class="cls-7" cx="78.64" cy="63.09" r="7.02"/><circle class="cls-7" cx="52.67" cy="63.09" r="7.02"/><path class="cls-6" d="M65,102.59a42.5,42.5,0,0,0,32.31-23.7c10.82-22-3.73-36-3.73-36a109,109,0,0,1,1.09,12.29c.29,7.46-2.48,11.56-5.41,13.9s-7.46,2.34-9.87-2.2S71.3,65.43,65,65.43s-12-3.07-14.39,1.46-6.94,4.54-9.87,2.2-5.7-6.44-5.41-13.9.88-11.35.88-11.35-14.93,13.1-4.1,35.05A43,43,0,0,0,65,102.59Z"/><path class="cls-8" d="M33.34,50.19c-.18,4.77.89,8.16,2.44,10.6a22.44,22.44,0,0,1-.44-5.6c.29-7.46.88-11.35.88-11.35A20.68,20.68,0,0,0,33.5,47C33.44,48,33.39,49,33.34,50.19Z"/><path class="cls-8" d="M98.06,49.33c1.85,6.15,2.21,14.52-2.74,24.56l-.33.65c-13.47,26.28-51,26.29-64.54,0l-.33-.66c-.11-.22-.2-.44-.3-.65a40.72,40.72,0,0,0,2.3,5.65A43,43,0,0,0,65,102.59a42.5,42.5,0,0,0,32.31-23.7C103.78,65.78,101.19,55.49,98.06,49.33Z"/><ellipse class="cls-9" cx="65.42" cy="63.09" rx="6.78" ry="4.49"/><circle class="cls-10" cx="77.91" cy="54.46" r="7.03"/><circle class="cls-10" cx="52.75" cy="54.46" r="7.03"/><circle class="cls-11" cx="77.91" cy="54.46" r="7.03"/><circle class="cls-11" cx="52.75" cy="54.46" r="7.03"/><path class="cls-12" d="M55.45,54.6a2.71,2.71,0,1,1-5.41,0"/><path class="cls-12" d="M80.61,54.6a2.71,2.71,0,1,1-5.41,0"/><path class="cls-11" d="M70.89,53.7c-.78,1.34-3,2.3-5.55,2.3s-4.72-.94-5.52-2.26"/><line class="cls-11" x1="84.09" x2="91.32" y1="51.11" y2="47.43"/><line class="cls-11" x1="46.26" x2="39.03" y1="51.11" y2="47.43"/><path class="cls-13" d="M37.25,41.2c-.71-5.26,2.32-10.52,2.32-10.52S29.29,32.86,24.83,41.2C30.66,39.7,36.42,39.32,37.25,41.2Z"/><path class="cls-5" d="M74.54,42.73s6.44-.41,10.83,3.39"/><circle class="cls-6" cx="21.23" cy="42.42" r="6.68"/><path class="cls-14" d="M72.55,71a1,1,0,0,1,1,1.06,8.55,8.55,0,0,1-17,0,1,1,0,0,1,1-1.06Z"/><path class="cls-4" d="M65,79.66a8.51,8.51,0,0,0,6.29-2.79,9.06,9.06,0,0,0-12.58,0A8.51,8.51,0,0,0,65,79.66Z"/><circle class="cls-6" cx="64" cy="114" r="4"/><path class="cls-13" d="M86.88,119.46a59.79,59.79,0,0,0,6.82-3.34L89.7,105Z"/><path class="cls-13" d="M41.12,119.46,38.3,105l-4,11.12A59.79,59.79,0,0,0,41.12,119.46Z"/></svg>
+            </div>
+            <div class="title">Connexion</div>
+            <hr>
+        </div>
+        <div class="card-body">
+            <div class="card-form-group">
+                <label for="">Nom d'utilisateur</label>
+                <div class="card-form-input">
+                    <svg width="32px" height="32px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><g fill="none" fill-rule="evenodd" id="页面-1" stroke="none" stroke-width="1"><g id="导航图标" transform="translate(-25.000000, -207.000000)"><g id="编组" transform="translate(25.000000, 207.000000)"><rect fill="#FFFFFF" fill-opacity="0.01" fill-rule="nonzero" height="24" id="矩形" width="24" x="0" y="0"/><path d="M12,10 C13.933,10 15.5,8.433 15.5,6.5 C15.5,4.567005 13.933,3 12,3 C10.067,3 8.5,4.567005 8.5,6.5 C8.5,8.433 10.067,10 12,10 Z" id="路径" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/><path d="M3,20.4 L3,21 L21,21 L21,20.4 C21,18.1598 21,17.0397 20.56405,16.18405 C20.18055,15.4314 19.5686,14.81945 18.81595,14.43595 C17.9603,14 16.8402,14 14.6,14 L9.4,14 C7.1598,14 6.0397,14 5.18405,14.43595 C4.43139,14.81945 3.819465,15.4314 3.435975,16.18405 C3,17.0397 3,18.1598 3,20.4 Z" id="路径" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></g></g></g></svg>
+                    <input type="text" name="" id="">
+                </div>
+            </div>
+            <div class="card-form-group">
+                <label for="">Mot de passe de l'utilisateur</label>
+                <div class="card-form-input">
+                    <svg width="32px" height="32px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <path style="fill:#fff;" d="M191.346,419.646H39.943C17.919,419.646,0,401.727,0,379.704V223.444
+                            c0-22.022,17.916-39.938,39.938-39.938H191.35c22.022,0,39.938,17.916,39.938,39.938v111.879c0,7.619-6.176,13.796-13.796,13.796
+                            s-13.796-6.176-13.796-13.796V223.444c0-6.808-5.539-12.347-12.347-12.347H39.938c-6.808,0-12.347,5.539-12.347,12.347v156.259
+                            c0,6.811,5.54,12.351,12.351,12.351h151.403c7.619,0,13.796,6.176,13.796,13.796S198.965,419.646,191.346,419.646z"/>
+                        <rect x="216.951" y="217.723" style="fill:none;" width="281.252" height="133.059"/>
+                        <g>
+                            <path style="fill:#fff;" d="M498.204,364.571H216.958c-7.619,0-13.796-6.176-13.796-13.796V217.718
+                                c0-7.619,6.176-13.796,13.796-13.796h281.247c7.619,0,13.796,6.176,13.796,13.796v133.058
+                                C512,358.395,505.824,364.571,498.204,364.571z M230.753,336.98h253.655V231.513H230.753V336.98z"/>
+                            <path style="fill:#fff;" d="M187.494,203.322c-7.619,0-13.796-6.176-13.796-13.796v-11.528
+                                c0-32.011-26.042-58.054-58.054-58.054s-58.054,26.042-58.054,58.054v11.528c0,7.619-6.176,13.796-13.796,13.796
+                                S30,197.146,30,189.526v-11.528c0-47.224,38.421-85.645,85.645-85.645s85.645,38.421,85.645,85.645v11.528
+                                C201.29,197.146,195.114,203.322,187.494,203.322z"/>
+                            <path style="fill:#fff;" d="M289.49,298.043h-19.453c-7.619,0-13.796-6.176-13.796-13.796c0-7.619,6.176-13.796,13.796-13.796
+                                h19.453c7.619,0,13.796,6.176,13.796,13.796C303.285,291.867,297.109,298.043,289.49,298.043z"/>
+                            <path style="fill:#fff;" d="M367.308,298.043h-19.455c-7.619,0-13.796-6.176-13.796-13.796c0-7.619,6.176-13.796,13.796-13.796
+                                h19.455c7.619,0,13.796,6.176,13.796,13.796C381.104,291.867,374.926,298.043,367.308,298.043z"/>
+                            <path style="fill:#fff;" d="M445.124,298.043h-19.453c-7.619,0-13.796-6.176-13.796-13.796c0-7.619,6.176-13.796,13.796-13.796
+                                h19.453c7.619,0,13.796,6.176,13.796,13.796C458.92,291.867,452.743,298.043,445.124,298.043z"/>
+                        </g>
+                        <circle style="fill:#fff;" cx="115.649" cy="299.421" r="33.11"/>
+                        <path style="fill:#fff;" d="M115.645,346.329c-25.864,0-46.905-21.041-46.905-46.905c0-25.864,21.041-46.905,46.905-46.905
+                            s46.905,21.041,46.905,46.905C162.55,325.288,141.508,346.329,115.645,346.329z M115.645,280.11
+                            c-10.65,0-19.314,8.664-19.314,19.314c0,10.65,8.664,19.314,19.314,19.314s19.314-8.664,19.314-19.314
+                            C134.959,288.774,126.294,280.11,115.645,280.11z"/><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                    </svg>
+                    <input type="password" name="" id="">
+                </div>
+            </div> 
+        </div>
+        <div class="card-foot">
+            <div class="form-button">
+                <button type="reset" class="btn btn-form">
+                    Annuler
+                </button>
+                <button type="submit" class="btn btn-form">
+                    Se Connecter
+                </button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

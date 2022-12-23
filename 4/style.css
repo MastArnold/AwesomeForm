@@ -1,0 +1,205 @@
+@keyframes open-door-left{
+    0%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-200%);
+        opacity: 0;
+    }
+}
+
+@keyframes open-door-right{
+    0%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(200%);
+        opacity: 0;
+    }
+}
+
+@keyframes wrong-open-door-left{
+    0%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    50%{
+        transform: translateX(-50%);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes wrong-open-door-right{
+    0%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    50%{
+        transform: translateX(50%);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes shake-input{
+    0%{
+        transform: translateX(0);
+        scale: 1;
+        border-color: #fff;
+    }
+    25%{
+        transform: translateX(-50px);
+        scale: 0.9;
+        border-color: red;
+    }
+    50%{
+        transform: translateX(50px);
+        scale: 0.9;
+        border-color: red;
+    }
+    75%{
+        transform: translateX(0);
+        scale: 0.9;
+        border-color: red;
+    }
+    100%{
+        transform: translateX(0);
+        scale: 1;
+        border-color: #fff;
+    }
+}
+
+@keyframes megazoom{
+    0%{
+        scale : 1;
+    }
+    100%{
+        scale: 5;
+    }
+}
+
+@keyframes fade{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@font-face {
+    font-family: "Adalien Soft";
+    src: url("ttf/AdalienSoft.ttf") format("ttf");
+}
+@font-face {
+    font-family: "Arinoe";
+    src: url("ttf/Arinoe.ttf") format("ttf");
+}
+@font-face {
+    font-family: "Beautiful";
+    src: url("ttf/Beautiful.ttf") format("ttf");
+}
+
+body{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+h2{
+    font-family: "Adalien Soft";
+    text-align: center;
+}
+
+.famous{
+    background: url('img/blob2.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-clip: content-box;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin-top:60px;
+}
+
+.door{
+    display: flex;
+    justify-content: center;
+    margin-top:100px;
+}
+
+.door-left svg{
+    transform: rotateY(180deg);
+}
+
+.form-door{
+    width: 300px;
+    padding : 8px;
+    margin : 0 auto;
+}
+.form-door-group{
+    padding : 12px 8px;
+}
+.form-door-group label{
+    display: block;
+    font-size: 12px;
+    font-family: 'MV Boli';
+    font-weight: bold;
+    color: #fff;
+}
+.form-door-group input{
+    width: 100%;
+    Font-family: 'Kalam';
+    font-size: 16px;
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+    padding : 5px 8px;
+    text-align: center;
+    outline: 0;
+}
+.form-door-group button{
+    cursor: pointer;
+    background: #fff;
+    color:#343dc7;
+    padding:12px;
+    width: 150px;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.humaaans{
+    display: flex;
+    justify-content: space-between;
+    padding : 12px 30px;
+    transition: all 0.5s ease-in-out;
+}
+.humaaans img{
+    transition: all 400ms ease-in-out;
+}
+
+@media (max-width : 980px) {
+    .humaaans img{
+        width: 200px;
+        height: auto;
+    }
+}
+@media (max-width : 750px) {
+    .humaaans{
+        opacity: 0;
+    }
+}
