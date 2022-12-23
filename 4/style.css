@@ -52,28 +52,23 @@
 
 @keyframes shake-input{
     0%{
-        transform: translateX(0);
-        scale: 1;
+        transform: rotate(0);
         border-color: #fff;
     }
     25%{
-        transform: translateX(-50px);
-        scale: 0.9;
-        border-color: red;
+        transform: rotate(7deg);
+        border-color: #ce2727;
     }
     50%{
-        transform: translateX(50px);
-        scale: 0.9;
-        border-color: red;
+        transform: rotate(-7deg);
+        border-color: #ce2727;
     }
     75%{
-        transform: translateX(0);
-        scale: 0.9;
-        border-color: red;
+        transform: rotate(4deg);
+        border-color: #ce2727;
     }
     100%{
-        transform: translateX(0);
-        scale: 1;
+        transform: rotate(0);
         border-color: #fff;
     }
 }
@@ -96,19 +91,6 @@
     }
 }
 
-@font-face {
-    font-family: "Adalien Soft";
-    src: url("ttf/AdalienSoft.ttf") format("ttf");
-}
-@font-face {
-    font-family: "Arinoe";
-    src: url("ttf/Arinoe.ttf") format("ttf");
-}
-@font-face {
-    font-family: "Beautiful";
-    src: url("ttf/Beautiful.ttf") format("ttf");
-}
-
 body{
     overflow: hidden;
     width: 100%;
@@ -120,30 +102,31 @@ h2{
     text-align: center;
 }
 
-.famous{
-    background: url('img/blob2.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-clip: content-box;
+.door-container{
     position:absolute;
     top:0;
     right:0;
     bottom:0;
     left:0;
-    margin-top:60px;
 }
+.door-block{
+    background: url('img/blob2.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 130% 130%;
 
+    width: 400px;
+    margin: 80px auto;
+    padding : 60px;
+}
 .door{
     display: flex;
     justify-content: center;
-    margin-top:100px;
+    margin-top:10px;
 }
-
 .door-left svg{
     transform: rotateY(180deg);
 }
-
 .form-door{
     width: 300px;
     padding : 8px;
