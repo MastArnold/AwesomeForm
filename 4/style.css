@@ -56,15 +56,15 @@
         border-color: #fff;
     }
     25%{
-        transform: rotate(7deg);
+        transform: rotate(5deg);
         border-color: #ce2727;
     }
     50%{
-        transform: rotate(-7deg);
+        transform: rotate(-5deg);
         border-color: #ce2727;
     }
     75%{
-        transform: rotate(4deg);
+        transform: rotate(2deg);
         border-color: #ce2727;
     }
     100%{
@@ -98,7 +98,8 @@ body{
 }
 
 h2{
-    font-family: "Adalien Soft";
+    font-family: 'Hollies Colour Me';
+    font-size: 40px;
     text-align: center;
 }
 
@@ -108,6 +109,7 @@ h2{
     right:0;
     bottom:0;
     left:0;
+    z-index: 1999;
 }
 .door-block{
     background: url('img/blob2.svg');

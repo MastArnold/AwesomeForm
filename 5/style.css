@@ -1,0 +1,126 @@
+@keyframes eye-left{
+    100%{
+        transform: translate(-80px, -5px);
+    }
+}
+@keyframes eye-down{
+    100%{
+        transform: translate(0, 80px);
+    }
+}
+@keyframes eye-right{
+    100%{
+        transform: translate(80px, 5px);
+    }
+}
+
+body{
+    overflow: hidden;
+    width: 100%;
+    margin:0;
+    padding:0;
+}
+
+.eye{
+    overflow: hidden;
+    padding:0;
+}
+.eye .eye-blind{
+    transition: all 1s ease-in-out;
+}
+
+.eye .iris{
+    transition: all 1s ease-in-out;
+}
+.eye circle:nth-child(1){
+    fill:#fff;
+}
+.eye circle:nth-child(2){
+    fill:#92440c;
+    
+}
+.eye circle:nth-child(3){
+    fill:#fff;
+}
+
+.eye h3{
+    color : #fff;
+    opacity: 0;
+    text-align: center;
+    transition: all 800ms ease-in-out;
+}
+
+.container{
+    width: 100%;
+    background: linear-gradient(to bottom right, #1b2eff, #000865);
+    z-index: 1999;
+}
+.mini-container-1{
+    padding : 120px 0;
+}
+.mini-container-2{
+    padding : 0px
+}
+.d-flex{
+    display: flex;
+} 
+.justify-space-between{
+    justify-content: space-between;
+}
+.justify-center{
+    justify-content: center;
+}
+
+.eye-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /************************/
+    width: 300px;
+    height: 100px;
+    padding : 18px;
+    margin: 0 12px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: all 400ms ease-in-out;
+}
+.eye-form.active{
+    box-shadow: 5px 5px 11px 0px rgba(255,255,255,0.69);
+    -webkit-box-shadow: 5px 5px 11px 0px rgba(255,255,255,0.69);
+    -moz-box-shadow: 5px 5px 11px 0px rgba(255,255,255,0.69);
+}
+.eye-form.disable{
+    background: rgba(0, 0, 0, 0.7);
+}
+.eye-form label{
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Carlito';
+    color : #fff;
+}
+.eye-form input{
+    width: 100%;
+    padding : 5px 8px;
+    border:1px solid transparent;
+    outline:0;
+}
+.btn{
+    cursor: pointer;
+    padding: 5px;
+    margin : 0 5px;
+    border: 1px solid transparent;
+}
+.btn-next{
+    width: 50px;
+    height: 50px;
+    background: url('img/next.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.btn-co{
+    background-color: rgb(15, 48, 214);
+    border:1px solid transparent;
+    color : #fff;
+}
