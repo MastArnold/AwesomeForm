@@ -1,0 +1,88 @@
+.d-flex{
+    display: flex;
+}
+.justify-end{
+    justify-content: end;
+}
+.justify-start{
+    justify-content: start;
+}
+
+.btn{
+    cursor: pointer;
+    width: 120px;
+    background: linear-gradient(to right, #c100ff, rgb(77, 6, 69), fuchsia);
+    color : #fff;
+    font-weight: bold;
+    padding : 12px;
+    border:1px solid transparent;
+    border-radius: 6px;
+    transition: all 4s ease-in-out;
+}
+
+.wrap{
+    transition: all 2s ease-in-out;
+}
+
+.down{
+    transform: translateY(-1000px);
+}
+.fade-out{
+    opacity: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background-color: rgba(0,0,0,0);
+    transition: all 2s ease-in-out;
+    z-index: 1999;
+}
+.container .main{
+    display: flex;
+    width: 60%;
+    height: 50vh;
+}
+.container .main .head{
+    background: rgba(255,255,255,0.4);
+    border: 1px dotted #fff;
+    border-right-color: transparent;
+    width: 40%;
+    height: 100%;
+}
+.container .main .form{
+    background-color: rgba(0, 0, 0, 0.6);
+    color : #fff;
+    width: 60%;
+    height: 100%;
+    padding:0.75rem;
+}
+.container .main .form .form-group{
+    margin:8px 0;
+}
+.container .main .form .form-group label{
+    display: block;
+    margin:0;
+    padding:0;
+    font-size: 14px;
+    font-family: 'Carlito';
+    font-weight: bold;
+}
+.container .main .form .form-group input{
+    width: 100%;
+    background-color: #000;
+    color:#fff;
+    border:1px solid #fff;
+    padding:6px 0.75rem;
+    outline:0;
+    transition: all 400ms ease-in-out;
+}
+.container .main .form .form-group input:focus{
+
+}
