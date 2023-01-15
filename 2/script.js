@@ -25,6 +25,9 @@ form.addEventListener('submit', function(e){
     if(usernameText != '' && passwordText != ''){
         wrap.classList.add("down");
         container.classList.add("fade-out");
+        setTimeout(() => {
+            window.location.href = "home.html";
+        }, 3000);
     }else{
         btn.attributes.setNamedItem('disabled');
     }
